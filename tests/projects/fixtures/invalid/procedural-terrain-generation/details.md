@@ -1,0 +1,1 @@
+This invalid project details markdown fixture.

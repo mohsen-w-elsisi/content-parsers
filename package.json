@@ -1,0 +1,28 @@
+{
+  "name": "@mohsen-w-elsisi/content-parsers",
+  "version": "1.0.0",
+  "author": "Mohsen Elsisi",
+  "description": "parsers for content files for use in generating static sites and resumes by Mohsen Elsisi",
+  "keywords": [],
+  "license": "MIT",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest --config tests/vitest.config.ts run tests"
+  },
+  "dependencies": {
+    "yaml": "^2.9.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/yaml": "^1.9.6",
+    "typescript": "^5.1.6",
+    "vitest": "^4.1.10"
+  }
+}

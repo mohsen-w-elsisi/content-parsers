@@ -1,0 +1,16 @@
+title: procedural terrain generation
+favourite: false
+description: 2D terrain generation using perling noise
+tags:
+  - graphics
+  - algorithms
+tools:
+  - typescript
+  - firebase
+links:
+  - platform: blog post
+    url: https://mohsenelsisi.com/blog/how-minecraft-has-an-infinite-amount-worlds/
+  - platform: github
+    url: https://github.com/mohsen-w-elsisi/procedural-terrain-gen
+  - platform: website
+    url: https://mohsen-procedural-gen.web.app/
