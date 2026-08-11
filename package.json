@@ -1,6 +1,6 @@
 {
   "name": "@mohsen-w-elsisi/content-parsers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Mohsen Elsisi",
   "description": "parsers for content files for use in generating static sites and resumes by Mohsen Elsisi",
   "keywords": [],
