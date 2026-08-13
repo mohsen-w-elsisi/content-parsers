@@ -8,16 +8,18 @@ import type { Parser } from "./parser.js";
 
 const projectEntrySchema = z.object({
   title: z.string(),
-  favourite: z.boolean(),
+  favourite: z.boolean().default(false),
   description: z.string(),
-  tags: z.array(z.string()),
+  tags: z.array(z.string()).default([]),
   tools: z.array(z.string()).default([]),
-  links: z.array(
-    z.object({
-      platform: z.string(),
-      url: z.string(),
-    }),
-  ),
+  links: z
+    .array(
+      z.object({
+        platform: z.string(),
+        url: z.string(),
+      }),
+    )
+    .default([]),
 });
 
 type ProjectEntry = z.infer<typeof projectEntrySchema>;
@@ -31,7 +33,7 @@ export const projectZodSchema = projectEntrySchema.extend({
   showcaseImages: z.array(z.string()),
 });
 
-export type Project  = z.infer<typeof projectZodSchema>;
+export type Project = z.infer<typeof projectZodSchema>;
 
 export class ProjectsParser implements Parser<Project> {
   private readonly rootDir: string;
@@ -127,5 +129,3 @@ class ProjectEntryParser {
     }
   }
 }
-
-
