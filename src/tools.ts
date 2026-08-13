@@ -22,7 +22,9 @@ export class ToolsParser implements Parser<Tool> {
 
 const toolIndexSchema = z.record(z.string(), z.string());
 
-export interface Tool {
-  name: string;
-  icon: string;
-}
+export const toolZodSchema = z.object({
+  name: z.string(),
+  icon: z.string(),
+});
+
+export type Tool = z.infer<typeof toolZodSchema>;

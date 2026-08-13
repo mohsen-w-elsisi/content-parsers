@@ -1,4 +1,4 @@
 export type { Parser } from "./parser.js";
-export { ProjectsParser, Project } from "./projects.js";
-export { ToolsParser, Tool } from "./tools.js";
-export { PlatformsParser, Platform } from "./platforms.js";
+export { ProjectsParser, Project, projectZodSchema } from "./projects.js";
+export { ToolsParser, Tool, toolZodSchema } from "./tools.js";
+export { PlatformsParser, Platform, platformZodSchema } from "./platforms.js";

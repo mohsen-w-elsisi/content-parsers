@@ -22,14 +22,16 @@ const projectEntrySchema = z.object({
 
 type ProjectEntry = z.infer<typeof projectEntrySchema>;
 
-export interface Project extends ProjectEntry {
-  id: string;
-  details: string;
-  resume: string;
-  icon?: string;
-  thumbnail: string;
-  showcaseImages: string[];
-}
+export const projectZodSchema = projectEntrySchema.extend({
+  id: z.string(),
+  details: z.string(),
+  resume: z.string(),
+  icon: z.string().optional(),
+  thumbnail: z.string(),
+  showcaseImages: z.array(z.string()),
+});
+
+export type Project  = z.infer<typeof projectZodSchema>;
 
 export class ProjectsParser implements Parser<Project> {
   private readonly rootDir: string;
@@ -125,3 +127,5 @@ class ProjectEntryParser {
     }
   }
 }
+
+

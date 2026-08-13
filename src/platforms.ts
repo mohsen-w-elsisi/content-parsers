@@ -38,3 +38,9 @@ const platformSourceSchema = z.object({
 });
 
 type PlatformSource = z.infer<typeof platformSourceSchema>;
+
+export const platformZodSchema = z.object({
+  name: z.string(),
+  color: z.string(),
+  icon: z.string(),
+});
