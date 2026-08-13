@@ -11,7 +11,7 @@ const projectEntrySchema = z.object({
   favourite: z.boolean(),
   description: z.string(),
   tags: z.array(z.string()),
-  tools: z.array(z.string()),
+  tools: z.array(z.string()).default([]),
   links: z.array(
     z.object({
       platform: z.string(),
